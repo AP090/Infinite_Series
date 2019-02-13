@@ -12,11 +12,11 @@ public class CalculatingPi {
 
 		System.out.println(
 				"This infinite series is called the Gregory-Leibniz series. It is one of the many infinite series used to calculate pi."
-						+ "\nThis series follows the sequence π = 4(1 - 1/3 + 1/5 - 1/7...)"
-						+ "\nThis program calculates within the parentheses first, and then multiplies by four to get pi."
-						+ "\nBy default, this series has one term (-1/3). The 1 is not counted as a term."
-						+ "Choose how many terms you want in this series. Unfortunately, this series converges slowly. "
-						+ "\nIt takes 300 terms to calculate pi to two decimal places, so pick a large number!");
+				+ "\nThis series follows the sequence π = 4(1 - 1/3 + 1/5 - 1/7...)"
+				+ "\nThis program calculates within the parentheses first, and then multiplies by four to get pi."
+				+ "\nBy default, this series has one term (-1/3). The 1 is not counted as a term."
+				+ "Choose how many terms you want in this series. Unfortunately, this series converges slowly. "
+				+ "\nIt takes 300 terms to calculate pi to two decimal places, so pick a large number!");
 		wantedTerms = sc.nextInt();
 		sc.close();
 		piCalc(wantedTerms);
