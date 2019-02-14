@@ -31,8 +31,8 @@ public class CalculatingPi {
 			} else if (i % 2 == 0) {
 				sum = piCalcEvenTerm(sum, denom);
 			} else {
-				System.out.print("Something wierd happened");
-				main(new String[0]); // This actually isn't necessary, but it'll annoy Leone, so I'll let it stay
+				System.err.print("Something wierd happened");
+				throw new Error("Something weird happpepenenoned");
 			}
 			denom += 2;
 		}
