@@ -39,7 +39,8 @@ public class PiCalculator_GregoryLeibniz {
 		piApprox = sum * 4;
 		System.out.println(
 				"The value of pi is calculated to be " + piApprox + " using " + wantedTerms + " terms of the series."
-						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + ".");
+						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + "."
+						+ "\nThis value is " + (piApprox - Math.PI) + " off from Java's PI");
 	}
 
 	public static double piCalcSubTerm(double sum, double denom) {
