@@ -15,30 +15,29 @@ public class PiCalculator_GregoryLeibniz {
 						+ "\nChoose how many terms you want in this series. Unfortunately, this series converges slowly. "
 						+ "\nIt takes 300 terms to calculate pi to two decimal places, so pick a large number!");
 
-		int wantedTerms = sc.nextInt();
+		int iterations = sc.nextInt();
 		sc.close();
 
-		piCalc(wantedTerms);
+		double result = piCalc(iterations);
+		System.out.println(
+				"The value of pi is calculated to be " + result + " using " + iterations + " terms of the series."
+						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + ".");
 	}
 
-	public static void piCalc(int iterations) {
+	public static double piCalc(int iterations) {
 		double sum = 1;
 		int denom = 3;
 
 		for (int i = 1; i <= iterations; i++) {
-			if (i % 2 != 0) {
-				sum -= (1f / denom);
-			} else {
+			if (i % 2 == 0) {
 				sum += (1f / denom);
+			} else {
+				sum -= (1f / denom);
 			}
 
 			denom += 2;
 		}
 
-		final double piApprox = sum * 4;
-
-		System.out.println(
-				"The value of pi is calculated to be " + piApprox + " using " + iterations + " terms of the series."
-						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + ".");
+		return sum * 4;
 	}
 }
