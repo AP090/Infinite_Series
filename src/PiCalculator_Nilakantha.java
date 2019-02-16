@@ -42,7 +42,8 @@ public class PiCalculator_Nilakantha {
 		}
 		System.out.println(
 				"The value of pi is calculated to be " + sum + " using " + wantedTerms + " terms of the series."
-						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + ".");
+						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + "."
+						+ "\nThis value is " + (sum - Math.PI) + " off from Java's PI");
 	}
 
 	public static double piCalcAddTerm(double sum, double denomA, double denomB, double denomC) {
