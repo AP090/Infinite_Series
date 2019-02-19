@@ -1,7 +1,6 @@
 package infinity.pifast;
 
 import java.util.Scanner;
-import java.math.BigInteger;
 
 public class PiCalculator_PiFast {
 
