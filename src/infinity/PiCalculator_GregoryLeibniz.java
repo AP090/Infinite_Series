@@ -20,7 +20,8 @@ public class PiCalculator_GregoryLeibniz {
 		double result = piCalc(iterations);
 		System.out.println(
 				"The value of pi is calculated to be " + result + " using " + iterations + " terms of the series."
-						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + ".");
+						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + "."
+						+ "\nThis value is " + (result - Math.PI) + " off from Java's PI");
 	}
 
 	public static double piCalc(int iterations) {
@@ -40,3 +41,6 @@ public class PiCalculator_GregoryLeibniz {
 		return sum * 4;
 	}
 }
+
+
+	
