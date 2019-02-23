@@ -6,47 +6,67 @@ import series.calculators.PiCalculator_GregoryLeibniz;
 import series.calculators.PiCalculator_Nilakantha;
 import series.calculators.pifast.PiCalculator_PiFast;
 
+enum Series {
+    gregoryLeibniz, nilakantha, piFast
+};
+
 public class CalculatorSelector {
 
-    static int chosenSeries;
+    private static Scanner sc = new Scanner(System.in);
+    final static String options = "  GregoryLeibniz\n  Nilakantha\n  PiFast\n";
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.println("So, you'd like to calculate the value of pi?\n\n"
-                + "You can use the Gregory-Leibniz series (option 1) or the Nilakantha series (option 2).\n"
-                + "The latter series is superior as it uses fewer terms to approximate pi well.\n\n"
+        System.out.println("So, you'd like to calculate the value of pi?\n\n" + "You can choose between:\n" + options
+                + "\n" + "The latter series is superior as it uses fewer terms to approximate pi well.\n\n"
                 + "Choose your series.");
 
-        while (true) {
-            try {
-                chosenSeries = sc.nextInt();
-                postalService(chosenSeries);
-                break;
-            } catch (Exception fail) {
-                System.out.println("Something went wrong. Inputs have been reset and you must try again.");
-                sc.nextLine();
-            }
-        }
+        Series selectedSeries = getSeries();
 
-        sc.close();
+        Utils.tryForever(() -> postalService(selectedSeries));
     }
 
-    public static void postalService(int chosenSeries) throws Exception {
+    private static Series getSeries() {
+        while (true) {
+            // (Character.toLowerCase) less efficient, but, less redundant code to write
+            // and does it really matter? The user enters input so slowly anyway
+            final char firstChar = Character.toLowerCase(sc.nextLine().charAt(0));
+
+            switch (firstChar) {
+            case 'g':
+            case 'l':
+            case '1':
+                return Series.gregoryLeibniz;
+            case 'n':
+            case 'k':
+            case '2':
+                return Series.nilakantha;
+            case 'f':
+            case 'p':
+            case '3':
+                return Series.piFast;
+            default:
+                System.out.println(
+                        "Not an option! Try again. (Insert something here to say that your dumb)\nChoose between:\n");
+                System.out.println(options);
+            }
+        }
+    }
+
+    private static void postalService(Series chosenSeries) {
         // fields it out to separate packages
         switch (chosenSeries) {
-        case 1:
+        case gregoryLeibniz:
             PiCalculator_GregoryLeibniz.main();
             break;
-        case 2:
+        case nilakantha:
             PiCalculator_Nilakantha.main();
             break;
-        case 3:
+        case piFast:
             PiCalculator_PiFast.main();
             break;
         default:
-            throw new Exception(
-                    "Congrats on screwing up. You are the bane of developers everywhere. Please try again.");
+            throw new Error("Congrats on screwing up. You are the bane of developers everywhere. Please try again.");
         }
 
     }

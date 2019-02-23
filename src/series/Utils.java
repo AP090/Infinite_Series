@@ -30,5 +30,16 @@ public class Utils {
         System.out.println("The value of pi is calculated to be " + result + " using " + iterations
                 + " terms of the series." + "\nFor comparison, this is the value of pi typically used in Java: "
                 + Math.PI + "." + "\nThis value is " + Math.abs(result - Math.PI) + " off from Java's PI");
-    } 
+    }
+
+    public static void tryForever(Runnable cb) {
+        while (true) {
+            try {
+                cb.run();
+                break;
+            } catch (Exception err) {
+                System.err.println(err.getMessage());
+            }
+        }
+    }
 }
