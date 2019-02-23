@@ -24,10 +24,10 @@ public class PiCalculator_Nilakantha {
 				sc.nextLine();
 			}
 		}
-		piCalc(wantedTerms);
+		piCalcNK(wantedTerms);
 	}
 
-	public static void piCalc(long wantedTerms) {
+	public static void piCalcNK(long wantedTerms) {
 		double sum = 3;
 		double denomA = 2;
 		double denomB = 3;
@@ -35,10 +35,8 @@ public class PiCalculator_Nilakantha {
 		for (int i = 1; i <= wantedTerms; i++) {
 			if (i % 2 != 0) {
 				sum += (4 / (denomA * denomB * denomC));
-			} else if (i % 2 == 0) {
-				sum -= (4 / (denomA * denomB * denomC));
 			} else {
-				System.out.print("Something wierd happened. Sorry.");
+				sum -= (4 / (denomA * denomB * denomC));
 			}
 			denomA += 2;
 			denomB += 2;
