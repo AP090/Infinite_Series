@@ -6,7 +6,7 @@ import series.calculators.PiCalculator_GregoryLeibniz;
 import series.calculators.PiCalculator_Nilakantha;
 import series.calculators.pifast.PiCalculator_PiFast;
 
-public class Sorting {
+public class CalculatorSelector {
 
     static int chosenSeries;
 
