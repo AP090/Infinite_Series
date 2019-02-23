@@ -1,4 +1,4 @@
-package series.pifast;
+package series.calculators.pifast;
 
 // The Poor Man's Implementation of the factorial.
 

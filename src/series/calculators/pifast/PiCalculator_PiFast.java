@@ -1,10 +1,10 @@
-package series.pifast;
+package series.calculators.pifast;
 
 import java.util.Scanner;
 
 public class PiCalculator_PiFast {
 
-    public static void main(String[] args) {
+    public static void main() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println(

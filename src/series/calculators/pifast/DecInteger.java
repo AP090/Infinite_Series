@@ -1,4 +1,4 @@
-package series.pifast;
+package series.calculators.pifast;
 
 class DecInteger {
     private final static long mod = 100000000L;

@@ -1,9 +1,10 @@
-package series;
+package series.calculators;
 
 import java.util.Scanner;
 
 public class PiCalculator_GregoryLeibniz {
-	public static void infoPaneGL() {
+
+	public static void main() {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println(
@@ -24,17 +25,16 @@ public class PiCalculator_GregoryLeibniz {
 				sc.nextLine();
 			}
 		}
-		
+
 		sc.close();
 
-		double result = piCalcGL(iterations);
-		System.out.println(
-				"The value of pi is calculated to be " + result + " using " + iterations + " terms of the series."
-						+ "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + "."
-						+ "\nThis value is " + (result - Math.PI) + " off from Java's PI");
+		double result = piCalc(iterations);
+		System.out.println("The value of pi is calculated to be " + result + " using " + iterations
+				+ " terms of the series." + "\nFor comparison, this is the value of pi typically used in Java: "
+				+ Math.PI + "." + "\nThis value is " + Math.abs(result - Math.PI) + " off from Java's PI");
 	}
 
-	public static double piCalcGL(long iterations) {
+	public static double piCalc(long iterations) {
 		double sum = 1;
 		int denom = 3;
 
@@ -51,6 +51,3 @@ public class PiCalculator_GregoryLeibniz {
 		return sum * 4;
 	}
 }
-
-
-	
