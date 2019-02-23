@@ -18,7 +18,7 @@ The second program uses the superior series of Nalikantha. It converges on pi wi
 I plan to make more infinite series programs in the future, including one that uses a more efficent series to get pi. Then, I intend to use data on how the computer handles those calculations to calculate its processsing power. I have no idea how to do that, so it'll be off in the future.
 
 ## PiFast
-The thrid program uses an algorithm from [PiFast](http://numbers.computation.free.fr/Constants/PiProgram/pifast.html) and is supposedly the fastest algorithm for computing $\pi$, as claimed on the website.
+The thrid program uses an algorithm from [PiFast](http://numbers.computation.free.fr/Constants/PiProgram/pifast.html) and is supposedly the fastest algorithm for computing π, as claimed on the website.
 
 The algorithm follows the sequence
 
