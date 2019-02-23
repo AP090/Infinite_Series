@@ -5,9 +5,14 @@ import java.util.Scanner;
 public class Utils {
     private static Scanner sc = new Scanner(System.in);
 
+    private static String infoSeperatorString = "\n----------- INFO --------------------------------------------\n";
+    private static String seperatorString = "\n-------------------------------------------------------------\n";
+    private static String longIterationsInputRequestString = "long interations> ";
+
     public static void printInfo(String str) {
-        System.out.print("\n");
-        System.out.println(str);
+        System.out.print(infoSeperatorString);
+        System.out.print(str);
+        System.out.println(seperatorString);
     }
 
     public static long getIterations() {
@@ -15,7 +20,9 @@ public class Utils {
 
         while (true) {
             try {
+                System.out.print(longIterationsInputRequestString);
                 iterations = sc.nextLong();
+                System.out.print("\n");
                 break;
             } catch (Exception fail) {
                 System.out.println("You entered something stupid. Try again.");
