@@ -28,9 +28,18 @@ public class CalculatorSelector {
 
     private static Series getSeries() {
         while (true) {
+            System.out.print("series> ");
+
+            String line = sc.nextLine();
+
+            if (line.length() <= 0) {
+                line = "\0";
+            }
+
             // (Character.toLowerCase) less efficient, but, less redundant code to write
             // and does it really matter? The user enters input so slowly anyway
-            final char firstChar = Character.toLowerCase(sc.nextLine().charAt(0));
+            final char firstChar = Character.toLowerCase(line.charAt(0));
+            System.out.print("\n");
 
             switch (firstChar) {
             case 'g':
