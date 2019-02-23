@@ -14,3 +14,14 @@ The second program uses the superior series of Nalikantha. It converges on pi wi
 $\pi = 3 + \frac{4}{2 \times 3 \times 4} - \frac{4}{4 \times 5 \times 6} + \frac{4}{6 \times 7 \times 8} ...$
 
 I plan to make more infinite series programs in the future, including one that uses a more efficent series to get pi. Then, I intend to use data on how the computer handles those calculations to calculate its processsing power. I have no idea how to do that, so it'll be off in the future.
+
+## PiFast
+The thrid program uses an algorithm from [PiFast](http://numbers.computation.free.fr/Constants/PiProgram/pifast.html) and is supposedly the fastest algorithm for computing $\pi$, as claimed on the website.
+
+The algorithm follows the sequence
+
+$\frac{426880\sqrt{10005}}{\pi} = \sum_{n \geq 0} \frac{(6n)!(545140134n+13591409)}{(n!)^3(3n)!(-640320)^{3n}}$
+
+which can be derived to
+
+$\pi = \frac{\sum_{n \geq 0} \frac{(6n)!(545140134n+13591409)}{(n!)^3(3n)!(-640320)^{3n}}}{426880\sqrt{10005}}$
