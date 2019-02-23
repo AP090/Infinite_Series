@@ -1,4 +1,4 @@
-package infinity.pifast;
+package series.pifast;
 
 class DecInteger {
     private final static long mod = 100000000L;

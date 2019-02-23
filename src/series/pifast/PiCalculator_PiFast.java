@@ -1,4 +1,4 @@
-package infinity.pifast;
+package series.pifast;
 
 import java.util.Scanner;
 

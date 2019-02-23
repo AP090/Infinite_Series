@@ -1,4 +1,4 @@
-package infinity;
+package series;
 
 import java.util.Scanner;
 
