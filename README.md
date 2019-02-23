@@ -3,7 +3,7 @@
 This first program uses the famous Gregory-Leibniz series to calculate the value of pi. This series follows the sequence:
 
 <!-- $\pi = 4(1 - \frac{1}{3} + \frac{1}{5} + \frac{1}{7} ... )$ -->
-<a href="https://www.codecogs.com/eqnedit.php?latex=\pi&space;=&space;4(1&space;-&space;\frac{1}{3}&space;&plus;&space;\frac{1}{5}&space;-;&space;\frac{1}{7}&space;...&space;)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\pi&space;=&space;4(1&space;-&space;\frac{1}{3}&space;&plus;&space;\frac{1}{5}&space;-;&space;\frac{1}{7}&space;...&space;)" title="\pi = 4(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} ... )" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\pi&space;=&space;4(1&space;-&space;\frac{1}{3}&space;&plus;&space;\frac{1}{5}&space;-&space;\frac{1}{7}&space;...&space;)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\pi&space;=&space;4(1&space;-&space;\frac{1}{3}&space;&plus;&space;\frac{1}{5}&space;-&space;\frac{1}{7}&space;...&space;)" title="\pi = 4(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} ... )" /></a>
 
 Unfortunately, this series converges very slowly on the actual value of pi; it takes 300 terms just to get it correct to two decimal places!
 
