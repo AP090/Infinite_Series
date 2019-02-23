@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PiCalculator_Nilakantha {
 
-	public static void main(String[] args) {
+	public static void infoPanelNK(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println(
@@ -18,13 +18,13 @@ public class PiCalculator_Nilakantha {
 		int iterations = sc.nextInt();
 		sc.close();
 
-		double result = piCalc(iterations);
+		double result = piCalcNK(iterations);
 		System.out.println("The value of pi is calculated to be " + result + " using " + iterations
 				+ " terms of the series." + "\nFor comparison, this is the value of pi typically used in Java: "
 				+ Math.PI + "." + "\nThis value is " + (result - Math.PI) + " off from Java's PI");
 	}
 
-	public static double piCalc(int iterations) {
+	public static double piCalcNK(int iterations) {
 		double sum = 3;
 
 		for (int i = 1; i <= iterations; i++) {
