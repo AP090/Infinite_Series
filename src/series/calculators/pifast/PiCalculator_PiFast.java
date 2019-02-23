@@ -14,17 +14,26 @@ public class PiCalculator_PiFast {
                         + "\nChoose how many terms you want in this series. (But don't go too high because Java can't handle it)"
                         + "\nThis series is far superior than every other algorithm in this repo!");
 
-        int iterations = sc.nextInt();
+        long iterations;
+        while (true) {
+            try {
+                iterations = sc.nextLong();
+                break;
+            } catch (Exception fail) {
+                System.out.println("You entered something stupid. Try again.");
+                sc.nextLine();
+            }
+        }
         sc.close();
 
         double result = piCalc(iterations);
         System.out.println(
                 "The value of pi is calculated to be " + result + " using " + iterations + " terms of the series."
                         + "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + "."
-                        + "\nThis value is " + (result - Math.PI) + " off from Java's PI");
+                        + "\nThis value is " + Math.abs(result - Math.PI) + " off from Java's PI");
     }
 
-    public static double piCalc(int iterations) {
+    public static double piCalc(long iterations) {
         FactorialPoorMans f = new FactorialPoorMans();
         double sum = 0;
 
