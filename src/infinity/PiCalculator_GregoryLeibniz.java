@@ -7,14 +7,24 @@ public class PiCalculator_GregoryLeibniz {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println(
-				"This infinite series is called the Gregory-Leibniz series. It is one of the many infinite series used to calculate pi."
-						+ "\nThis series follows the sequence π = 4(1 - 1/3 + 1/5 - 1/7...)"
-						+ "\nThis program calculates within the parentheses first, and then multiplies by four to get pi."
-						+ "\nBy default, this series has one term: -1/3. The 1 is not counted as a term."
-						+ "\nChoose how many terms you want in this series. Unfortunately, this series converges slowly. "
-						+ "\nIt takes 300 terms to calculate pi to two decimal places, so pick a large number!");
+				"\nThis infinite series is called the Gregory-Leibniz series. It is one of the many infinite series used to calculate pi.\n\n"
+						+ "This series follows the sequence π = 4(1 - 1/3 + 1/5 - 1/7...)\n"
+						+ "This program calculates within the parentheses first, and then multiplies by four to get pi.\n\n"
+						+ "Unfortunately, this series is a poor approximation of pi. It takes over 300 terms to get two accurate decimal places!\n"
+						+ "Choose how many terms of the series you want. By default, the -1/3 is the first term.");
 
-		int iterations = sc.nextInt();
+		long iterations;
+
+		while (true) {
+			try {
+				iterations = sc.nextLong();
+				break;
+			} catch (Exception fail) {
+				System.out.println("You entered something stupid. Try again.");
+				sc.nextLine();
+			}
+		}
+		
 		sc.close();
 
 		double result = piCalcGL(iterations);
@@ -24,7 +34,7 @@ public class PiCalculator_GregoryLeibniz {
 						+ "\nThis value is " + (result - Math.PI) + " off from Java's PI");
 	}
 
-	public static double piCalcGL(int iterations) {
+	public static double piCalcGL(long iterations) {
 		double sum = 1;
 		int denom = 3;
 
