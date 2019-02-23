@@ -1,36 +1,21 @@
 package series.calculators.pifast;
 
-import java.util.Scanner;
+import series.Utils;
 
 public class PiCalculator_PiFast {
 
     public static void main() {
-        Scanner sc = new Scanner(System.in);
+        Utils.printInfo(
+                "This is the fastest algorithm to calculate PI I found on the internet.\n"
+                        + "It is one of the many infinite series used to calculate pi.\n"
+                        + "This series follows the sequence who's terms are too long to list here.\n"
+                        + "Choose how many terms you want in this series. (But don't go too high because Java can't handle it)\n"
+                        + "This series is far superior than every other algorithm in this repo!");
 
-        System.out.println(
-                "This is the fastest algorithm to calculate PI I found on the internet."
-                        + "\nIt is one of the many infinite series used to calculate pi."
-                        + "\nThis series follows the sequence who's terms are too long to list here."
-                        + "\nChoose how many terms you want in this series. (But don't go too high because Java can't handle it)"
-                        + "\nThis series is far superior than every other algorithm in this repo!");
-
-        long iterations;
-        while (true) {
-            try {
-                iterations = sc.nextLong();
-                break;
-            } catch (Exception fail) {
-                System.out.println("You entered something stupid. Try again.");
-                sc.nextLine();
-            }
-        }
-        sc.close();
+        long iterations = Utils.getIterations();
 
         double result = piCalc(iterations);
-        System.out.println(
-                "The value of pi is calculated to be " + result + " using " + iterations + " terms of the series."
-                        + "\nFor comparison, this is the value of pi typically used in Java: " + Math.PI + "."
-                        + "\nThis value is " + Math.abs(result - Math.PI) + " off from Java's PI");
+        Utils.printCalcResults(result, iterations);
     }
 
     public static double piCalc(long iterations) {
