@@ -15,10 +15,10 @@ The second program uses the superior series of Nalikantha. It converges on pi wi
 <!-- $\pi = 3 + \frac{4}{2 \times 3 \times 4} - \frac{4}{4 \times 5 \times 6} + \frac{4}{6 \times 7 \times 8} ...$ -->
 <a href="https://www.codecogs.com/eqnedit.php?latex=\pi&space;=&space;3&space;&plus;&space;\frac{4}{2&space;\times&space;3&space;\times&space;4}&space;-&space;\frac{4}{4&space;\times&space;5&space;\times&space;6}&space;&plus;&space;\frac{4}{6&space;\times&space;7&space;\times&space;8}&space;..." target="_blank"><img src="https://latex.codecogs.com/svg.latex?\pi&space;=&space;3&space;&plus;&space;\frac{4}{2&space;\times&space;3&space;\times&space;4}&space;-&space;\frac{4}{4&space;\times&space;5&space;\times&space;6}&space;&plus;&space;\frac{4}{6&space;\times&space;7&space;\times&space;8}&space;..." title="\pi = 3 + \frac{4}{2 \times 3 \times 4} - \frac{4}{4 \times 5 \times 6} + \frac{4}{6 \times 7 \times 8} ..." /></a>
 
-I plan to make more infinite series programs in the future, including one that uses a more efficent series to get pi. Then, I intend to use data on how the computer handles those calculations to calculate its processsing power. I have no idea how to do that, so it'll be off in the future.
+I plan to make more infinite series programs in the future, including one that uses a more efficient series to get pi. Then, I intend to use data on how the computer handles those calculations to calculate its processing power. I have no idea how to do that, so it'll be off in the future.
 
 ## PiFast
-The thrid program uses an algorithm from [PiFast](http://numbers.computation.free.fr/Constants/PiProgram/pifast.html) and is supposedly the fastest algorithm for computing π, as claimed on the website.
+The third program uses an algorithm from [PiFast](http://numbers.computation.free.fr/Constants/PiProgram/pifast.html) and is supposedly the fastest algorithm for computing π, as claimed on the website.
 
 The algorithm follows the sequence
 

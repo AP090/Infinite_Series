@@ -7,7 +7,7 @@ public class Utils {
 
     private static String infoSeperatorString = "\n----------- INFO --------------------------------------------\n";
     private static String seperatorString = "\n-------------------------------------------------------------\n";
-    private static String longIterationsInputRequestString = "long interations> ";
+    private static String longIterationsInputRequestString = "long iterations> ";
 
     public static void printInfo(String str) {
         System.out.print(infoSeperatorString);
